@@ -1,0 +1,84 @@
+
+<div class="createContainer">
+			
+	<div class="generalContainer">
+		<form name="createForm" >
+			<table class="createAd">
+				<tr>
+					<td class="header">
+						Title
+						<!-- <span style="color:red" ng-show="createForm.title.$error.required">*</span> -->
+						<span class="required" ng-show="createForm.title.$error.required">*</span>
+					</td>
+					<td>
+						<input class="createDefault" name="title" ng-model="createTitle" required></input>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						Description
+						<span class="required" ng-show="createForm.description.$error.required">*</span>
+					</td>
+					<td>
+						<textarea rows="20" cols="30" maxlength="2000" class="createDescription" name="description" ng-model="createDescription" required></textarea>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						Price
+						<span class="required" ng-show="createForm.price.$error.required">*</span>
+					</td>
+					<td>
+						<input class="createPrice" name="price" ng-model="createPrice" max="100000" required></input> &euro;
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Contact email
+						<span class="required" ng-show="createForm.email.$error.required">*</span>
+					</td>
+					<td>
+						<input class="createDefault" name="email" ng-model="createEmail" required></input>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Contact phone
+						<span class="required" ng-show="createForm.phone.$error.required">*</span>
+					</td>
+					<td>
+						<input class="createDefault" name="phone" ng-model="createPhone" required></input>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Image URL
+					</td>
+					<td>
+						<input class="createDefault" name="image" ng-model="createImage"></input>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="error">{{ errorCreate }}</td>
+				<tr>
+					<td></td>
+					<td>
+						<button 
+							class="createAd" 
+							ng-disabled="createForm.title.$invalid || createForm.description.$invalid || createForm.price.$invalid || createForm.email.$invalid || createForm.phone.$invalid" 
+							ng-click="saveAd()">
+							SAVE
+						</button>
+					</td>
+				</tr>
+
+			</table>
+		</form>
+		
+	</div>
+
+</div>
+

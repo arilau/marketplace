@@ -1,0 +1,93 @@
+
+<div class="generalContainer">
+	<form ng-submit="getAds()">
+	<ul>
+		<li>
+			Text search
+			<input class="text" ng-model="textSearch"></input>
+		</li>
+		<li>
+			Price 
+			<input class="price" ng-model="minPrice"></input> - 
+			<input class="price" ng-model="maxPrice"></input> &euro;
+		</li>
+		<li>
+			<input class="searchButton" type="submit" value="SEARCH"/>
+		</li>
+	</ul>
+	</form>
+</div>
+
+<div>
+
+	<div class="searchOngoing" ng-show="searchOngoing">Searching...</div>
+	<div class="resultText" ng-show="displayResults && adsFiltered.length >= 0 && !searchOngoing && !errorText">Found {{ adsFiltered.length }} ad(s).</div>
+	<div class="errorText" ng-show="errorText">{{errorText}}</div>
+
+	<div class="pagination" ng-show="adsFiltered.length > 0">
+		<dir-pagination-controls template-url="templates/dirPagination.tpl.html"></dir-pagination-controls>
+	</div>
+
+	<div class="manageSearchResults" ng-show="adsFiltered.length > 0">
+		Ads in page
+		<select ng-init="pageSize = 5" ng-model="pageSize">
+			<option selected="selected">5</option>
+			<option>10</option>
+			<option>25</option>
+			<option>100</option>
+		</select>
+		Order by
+		<button class="order" ng-click="orderByCheap()">cheap</button>
+		<button class="order" ng-click="orderByExpensive()">expensive</button>
+	</div>
+
+
+	<ul class="searchResults">
+
+		<li dir-paginate="ad in adsFiltered = ( ads | filter:removeCase(textFilter) | filter:greaterThan('priceCents', minFilter*100) | filter:lessThan('priceCents', maxFilter*100) | orderBy:ordering ) | itemsPerPage: pageSize">
+
+			<div class="generalContainer">
+				<a class="title" target="_blank" ng-href="#/ad/{{ad.id}}">
+					<table>
+						<tr>
+							<td class="thumbnail">
+								<img class="thumbnail" ng-src="{{ ad.thumbnailUrl || ad.imageUrl || DEFAULT_IMAGE }}"/>							
+							</td>
+							<td>
+								<table class="ad">
+									<tr>
+										<td class="title">
+											{{ ad.title }}
+										</td>
+										<td class="price">
+											{{ ad.priceCents / 100 | number: 2}} &euro;
+										</td>
+									</tr>
+									<tr>
+										<td class="description">
+											{{ ad.description | limitTo: 80}}
+											<span ng-if="ad.description.length > 80"><b>...</b></span>
+										</td>
+									</tr>
+									<tr>
+										<td class="contact"><img class="icon" src="img/phone.png"/>{{ ad.phone }}</td>
+										<td class="contact"><img class="icon" src="img/email.png"/>{{ ad.email }}</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table> 
+				</a>
+			</div>
+		</li>
+	</ul>
+
+
+	<div class="pagination" ng-show="adsFiltered.length > 0">
+		<dir-pagination-controls template-url="templates/dirPagination.tpl.html"></dir-pagination-controls>
+	</div>
+
+
+	<!-- <button ng-click="deleteAd()">DELETE AD</button><p> -->
+
+</div>

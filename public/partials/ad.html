@@ -1,0 +1,9 @@
+<div class="adContainer">
+	<h2>{{ ad.title }}</h2>
+	<img class="large" ng-src="{{ ad.imageUrl || DEFAULT_IMAGE }}"/>
+	<p><span class="adPropertyTitle">Description</span><br><pre class="desc">{{ ad.description }}</pre>
+	<p><span class="adPropertyTitle">Price:</span>{{ ad.priceCents / 100 | number: 2}} &euro;
+	<p><span class="adPropertyTitle">Email:</span><a href="mailto:{{ ad.email}}?subject=Kauppapaikka: {{ ad.title }}">{{ ad.email}}</a> 
+	<p><span class="adPropertyTitle">Phone:</span>{{ ad.phone}}
+	<p><button class="close" onclick="self.close()">CLOSE AD</button>
+</div>

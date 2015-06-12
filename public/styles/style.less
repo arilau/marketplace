@@ -1,0 +1,387 @@
+/* LESS - http://lesscss.org style sheet */
+
+@color-primary-0: #475874; 
+@color-primary-1: #5E7395;
+@color-primary-2: #4F6382;
+@color-primary-3: #415067;
+@color-primary-4: #3B4759;
+
+@color-bg: #f0f0f0;
+
+@color-text-0: #333;
+@color-text-1: #777;
+@color-text-3: #999;
+@color-text-4: #ccc;
+
+@color-border: lighten(@color-primary-1,35%);
+
+.color-button {
+  background-color: @color-primary-2;
+  background: linear-gradient(@color-primary-2, @color-primary-4);
+  background: -webkit-linear-gradient(@color-primary-2, @color-primary-4);
+  background: -o-linear-gradient(@color-primary-2, @color-primary-4);
+  background: -moz-linear-gradient(@color-primary-2, @color-primary-4);
+}
+
+.color-button-disabled {
+  background-color: #ddd;
+  background: linear-gradient(#eee, #ddd);
+  background: -webkit-linear-gradient(#eee, #ddd);
+  background: -o-linear-gradient(#eee, #ddd);
+  background: -moz-linear-gradient(#eee, #ddd);
+}
+
+.color-body {
+  background-color: lighten(@color-primary-1, 30%);
+  background: radial-gradient(lighten(@color-bg, 10%), lighten(@color-primary-1, 30%));
+  background: -webkit-radial-gradient(lighten(@color-bg, 10%), lighten(@color-primary-1, 30%));
+  background: -o-radial-gradient(lighten(@color-bg, 10%), lighten(@color-primary-1, 30%));
+  background: -moz-radial-gradient(lighten(@color-bg, 10%), lighten(@color-primary-1, 30%));
+}
+
+.color-navbar {
+  background-color: @color-primary-0;
+  background: linear-gradient(@color-primary-0, @color-primary-4);
+  background: -webkit-linear-gradient(@color-primary-0, @color-primary-4);
+  background: -o-linear-gradient(@color-primary-0, @color-primary-4);
+  background: -moz-linear-gradient(@color-primary-0, @color-primary-4);
+}
+
+.color-container {
+  background-color: lighten(@color-bg, 20%);
+  background: linear-gradient(lighten(@color-bg, 40%), lighten(@color-bg, 10%));
+  background: -webkit-linear-gradient(lighten(@color-bg, 40%), lighten(@color-bg, 10%));
+  background: -o-linear-gradient(lighten(@color-bg, 40%), lighten(@color-bg, 10%));
+  background: -moz-linear-gradient(lighten(@color-bg, 40%), lighten(@color-bg, 10%));
+}
+
+html { 
+  height: 95%;
+}
+
+body {
+  .color-body;
+  font-family: 'Arial';
+  color: @color-text-0;
+  font-family: Arial;
+  height: 100%;
+  text-align: center;
+}
+
+div.main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  min-height: 85%;
+  width: 90%;
+  max-width: 800px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+div.title {
+  font-family: 'Arial Rounded MT Bold';
+  color: @color-primary-0;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+
+div.naviPanel {
+  height: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul {
+  list-style: none;
+  .color-navbar;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.nav li {
+  font-size: 0.7em;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: @color-bg;
+  display: block;
+}
+
+.nav a:hover {
+  background-color: @color-primary-1;
+}
+
+.nav a:active {
+  background-color: @color-primary-1;
+  color: #eee;
+  cursor: default;
+}
+
+@media screen and (min-width:800px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.7em;
+    display: inline-block;
+    margin-right: -4px;
+  }
+  .nav li.info {
+    width: 60px;
+  }
+}
+
+.generalContainer {
+  .color-container;
+  color: @color-text-0;
+  font-size: 14px;
+  margin-bottom: 15px;  
+  padding: 7px;
+  border-radius: 3px;
+  margin-top: 0px;
+  border: 1px solid @color-border; 
+}
+
+div.generalContainer {
+  .generalContainer;
+}
+
+div.adContainer {
+  .generalContainer;
+  padding: 30px;
+}
+
+.generalContainer ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.info {
+  list-style-type: disc; 
+}
+
+@media screen and (min-width:600px) {
+  .generalContainer li {
+    display: inline-block;
+  }
+}
+
+input.text {
+  width: 200px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+input.price {
+  width: 50px;
+}
+
+.button-common {
+  .color-button;
+  color: @color-bg;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 80px;
+}
+
+input.searchButton {
+  .button-common;
+}
+
+button.close {
+  .button-common;
+}
+
+div.manageSearchResults {
+  font-size: 12px;
+  text-align: right;
+  color: @color-text-3;
+  margin-top: 5px;
+}
+
+button.order {
+  border: 0px;
+  font-size: 10px;
+  background-color: @color-bg;
+  color: @color-text-3;
+}
+
+button.createAd {
+  .button-common;
+}
+
+button:disabled {
+  .color-button-disabled;
+  color: #aaa;
+}
+
+.text-info-common {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+div.searchOngoing {
+  .text-info-common;
+  color: darken(@color-bg,20%);
+}
+
+div.resultText {
+  .text-info-common;
+  color: @color-text-1;
+}
+
+div.errorText {
+  .text-info-common;
+  color: red;
+}
+
+ul.searchResults {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 0px;
+}
+
+table {
+  width: 100%;
+  padding: 5px;
+}
+
+td.thumbnail {
+  width: 120px;
+  height: 90px; 
+}
+
+img.icon {
+  max-width: 14px;
+  max-height: 12px;
+  margin-right: 5px;
+}
+
+img.thumbnail {
+  max-width: 120px;
+  max-height: 80px;
+}
+
+img.large {
+  max-width: 400px;
+  max-height: 300px;
+}
+
+td.title {
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+a.title {
+  text-decoration: none;
+  color: @color-text-0;
+}
+
+span.adPropertyTitle {
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+td.price {
+  text-align: right;
+  font-size: 16px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+td.description {
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+
+td.contact {
+  font-size: 12px;
+  width: 120px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+td.message {
+  font-size: 12px;
+  text-align: right;
+}
+
+td.header {
+  width: 110px;
+}
+
+span.required {
+  color: red;
+}
+
+input.createDefault {
+  width: 300px;
+}
+
+textarea.createDescription {
+  width: 300px;
+  height: 200px;
+  border-color: #ccc;
+}
+
+input.createPrice {
+  width: 100px;
+}
+
+td.error {
+  color: red;
+}
+
+div.pagination {
+  font-size: 12px;
+}
+
+ul.pagination {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.pagination li {
+  display: inline;
+  margin-right: 1em;
+}
+
+a.pagination {
+    text-decoration: none;
+    color: @color-text-0;
+}
+
+div.footer {
+  height: 30px;
+  color: @color-text-3;
+  font-size: 11px;
+
+}
+
+pre.desc {
+  font-family: Arial;
+  white-space: pre-wrap;  
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap; 
+  white-space: -o-pre-wrap; 
+  word-wrap: break-word; 
+}
+
+
+

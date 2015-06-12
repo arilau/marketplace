@@ -1,0 +1,376 @@
+/* LESS - http://lesscss.org style sheet */
+.color-button {
+  background-color: #4f6382;
+  background: linear-gradient(#4f6382, #3b4759);
+  background: -webkit-linear-gradient(#4f6382, #3b4759);
+  background: -o-linear-gradient(#4f6382, #3b4759);
+  background: -moz-linear-gradient(#4f6382, #3b4759);
+}
+.color-button-disabled {
+  background-color: #ddd;
+  background: linear-gradient(#eeeeee, #dddddd);
+  background: -webkit-linear-gradient(#eeeeee, #dddddd);
+  background: -o-linear-gradient(#eeeeee, #dddddd);
+  background: -moz-linear-gradient(#eeeeee, #dddddd);
+}
+.color-body {
+  background-color: #b9c3d3;
+  background: radial-gradient(#ffffff, #b9c3d3);
+  background: -webkit-radial-gradient(#ffffff, #b9c3d3);
+  background: -o-radial-gradient(#ffffff, #b9c3d3);
+  background: -moz-radial-gradient(#ffffff, #b9c3d3);
+}
+.color-navbar {
+  background-color: #475874;
+  background: linear-gradient(#475874, #3b4759);
+  background: -webkit-linear-gradient(#475874, #3b4759);
+  background: -o-linear-gradient(#475874, #3b4759);
+  background: -moz-linear-gradient(#475874, #3b4759);
+}
+.color-container {
+  background-color: #ffffff;
+  background: linear-gradient(#ffffff, #ffffff);
+  background: -webkit-linear-gradient(#ffffff, #ffffff);
+  background: -o-linear-gradient(#ffffff, #ffffff);
+  background: -moz-linear-gradient(#ffffff, #ffffff);
+}
+html {
+  height: 95%;
+}
+body {
+  background-color: #b9c3d3;
+  background: radial-gradient(#ffffff, #b9c3d3);
+  background: -webkit-radial-gradient(#ffffff, #b9c3d3);
+  background: -o-radial-gradient(#ffffff, #b9c3d3);
+  background: -moz-radial-gradient(#ffffff, #b9c3d3);
+  font-family: 'Arial';
+  color: #333333;
+  font-family: Arial;
+  height: 100%;
+  text-align: center;
+}
+div.main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  min-height: 85%;
+  width: 90%;
+  max-width: 800px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 7px;
+}
+div.title {
+  font-family: 'Arial Rounded MT Bold';
+  color: #475874;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+div.naviPanel {
+  height: 40px;
+  padding: 0;
+  margin: 0;
+}
+.nav ul {
+  list-style: none;
+  background-color: #475874;
+  background: linear-gradient(#475874, #3b4759);
+  background: -webkit-linear-gradient(#475874, #3b4759);
+  background: -o-linear-gradient(#475874, #3b4759);
+  background: -moz-linear-gradient(#475874, #3b4759);
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.nav li {
+  font-size: 0.7em;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+}
+.nav a {
+  text-decoration: none;
+  color: #f0f0f0;
+  display: block;
+}
+.nav a:hover {
+  background-color: #5e7395;
+}
+.nav a:active {
+  background-color: #5e7395;
+  color: #eee;
+  cursor: default;
+}
+@media screen and (min-width: 800px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.7em;
+    display: inline-block;
+    margin-right: -4px;
+  }
+  .nav li.info {
+    width: 60px;
+  }
+}
+.generalContainer {
+  background-color: #ffffff;
+  background: linear-gradient(#ffffff, #ffffff);
+  background: -webkit-linear-gradient(#ffffff, #ffffff);
+  background: -o-linear-gradient(#ffffff, #ffffff);
+  background: -moz-linear-gradient(#ffffff, #ffffff);
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 7px;
+  border-radius: 3px;
+  margin-top: 0px;
+  border: 1px solid #c9d0dd;
+}
+div.generalContainer {
+  background-color: #ffffff;
+  background: linear-gradient(#ffffff, #ffffff);
+  background: -webkit-linear-gradient(#ffffff, #ffffff);
+  background: -o-linear-gradient(#ffffff, #ffffff);
+  background: -moz-linear-gradient(#ffffff, #ffffff);
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 7px;
+  border-radius: 3px;
+  margin-top: 0px;
+  border: 1px solid #c9d0dd;
+}
+div.adContainer {
+  background-color: #ffffff;
+  background: linear-gradient(#ffffff, #ffffff);
+  background: -webkit-linear-gradient(#ffffff, #ffffff);
+  background: -o-linear-gradient(#ffffff, #ffffff);
+  background: -moz-linear-gradient(#ffffff, #ffffff);
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 7px;
+  border-radius: 3px;
+  margin-top: 0px;
+  border: 1px solid #c9d0dd;
+  padding: 30px;
+}
+.generalContainer ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.info {
+  list-style-type: disc;
+}
+@media screen and (min-width: 600px) {
+  .generalContainer li {
+    display: inline-block;
+  }
+}
+input.text {
+  width: 200px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+input.price {
+  width: 50px;
+}
+.button-common {
+  background-color: #4f6382;
+  background: linear-gradient(#4f6382, #3b4759);
+  background: -webkit-linear-gradient(#4f6382, #3b4759);
+  background: -o-linear-gradient(#4f6382, #3b4759);
+  background: -moz-linear-gradient(#4f6382, #3b4759);
+  color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 80px;
+}
+input.searchButton {
+  background-color: #4f6382;
+  background: linear-gradient(#4f6382, #3b4759);
+  background: -webkit-linear-gradient(#4f6382, #3b4759);
+  background: -o-linear-gradient(#4f6382, #3b4759);
+  background: -moz-linear-gradient(#4f6382, #3b4759);
+  color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 80px;
+}
+button.close {
+  background-color: #4f6382;
+  background: linear-gradient(#4f6382, #3b4759);
+  background: -webkit-linear-gradient(#4f6382, #3b4759);
+  background: -o-linear-gradient(#4f6382, #3b4759);
+  background: -moz-linear-gradient(#4f6382, #3b4759);
+  color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 80px;
+}
+div.manageSearchResults {
+  font-size: 12px;
+  text-align: right;
+  color: #999999;
+  margin-top: 5px;
+}
+button.order {
+  border: 0px;
+  font-size: 10px;
+  background-color: #f0f0f0;
+  color: #999999;
+}
+button.createAd {
+  background-color: #4f6382;
+  background: linear-gradient(#4f6382, #3b4759);
+  background: -webkit-linear-gradient(#4f6382, #3b4759);
+  background: -o-linear-gradient(#4f6382, #3b4759);
+  background: -moz-linear-gradient(#4f6382, #3b4759);
+  color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 80px;
+}
+button:disabled {
+  background-color: #ddd;
+  background: linear-gradient(#eeeeee, #dddddd);
+  background: -webkit-linear-gradient(#eeeeee, #dddddd);
+  background: -o-linear-gradient(#eeeeee, #dddddd);
+  background: -moz-linear-gradient(#eeeeee, #dddddd);
+  color: #aaa;
+}
+.text-info-common {
+  font-size: 16px;
+  margin-left: 10px;
+}
+div.searchOngoing {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #bdbdbd;
+}
+div.resultText {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #777777;
+}
+div.errorText {
+  font-size: 16px;
+  margin-left: 10px;
+  color: red;
+}
+ul.searchResults {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 0px;
+}
+table {
+  width: 100%;
+  padding: 5px;
+}
+td.thumbnail {
+  width: 120px;
+  height: 90px;
+}
+img.icon {
+  max-width: 14px;
+  max-height: 12px;
+  margin-right: 5px;
+}
+img.thumbnail {
+  max-width: 120px;
+  max-height: 80px;
+}
+img.large {
+  max-width: 400px;
+  max-height: 300px;
+}
+td.title {
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+a.title {
+  text-decoration: none;
+  color: #333333;
+}
+span.adPropertyTitle {
+  font-weight: bold;
+  margin-right: 7px;
+}
+td.price {
+  text-align: right;
+  font-size: 16px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+td.description {
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+td.contact {
+  font-size: 12px;
+  width: 120px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+td.message {
+  font-size: 12px;
+  text-align: right;
+}
+td.header {
+  width: 110px;
+}
+span.required {
+  color: red;
+}
+input.createDefault {
+  width: 300px;
+}
+textarea.createDescription {
+  width: 300px;
+  height: 200px;
+  border-color: #ccc;
+}
+input.createPrice {
+  width: 100px;
+}
+td.error {
+  color: red;
+}
+div.pagination {
+  font-size: 12px;
+}
+ul.pagination {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.pagination li {
+  display: inline;
+  margin-right: 1em;
+}
+a.pagination {
+  text-decoration: none;
+  color: #333333;
+}
+div.footer {
+  height: 30px;
+  color: #999999;
+  font-size: 11px;
+}
+pre.desc {
+  font-family: Arial;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}

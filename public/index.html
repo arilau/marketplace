@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="marketplaceApp">
+
+	<link rel="shortcut icon" type="image/ico" href="favicon.png">
+	
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.angularjs.org/1.3.15/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.3.15/angular-route.min.js"></script>
+		<script src="https://code.angularjs.org/1.3.15/angular-resource.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/dirPagination.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<title>Marketplace</title>
+	</head>
+	
+	<body ng-controller="mainController" >
+		
+		<div class="main">
+			
+			<div class="title">marketplace<font style="font-size: 22px;">.com</font></div>
+			<div class="nav">
+				<ul>
+					<li class="info"><a href="#/info">INFO</a></li>
+					<li class="search"><a href="#/search">SEARCH ADS</a></li>
+					<li class="create"><a href="#/create">POST NEW AD</a></li>
+				</ul>
+			</div>
+
+			<div ng-view></div>
+
+		</div>
+
+		<div class="footer">Ari Laukkanen, ari.laukkanen@iki.fi</div>		
+
+	</body>
+</html>
+
+
